@@ -3,7 +3,13 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "highcharts": "^7.2.0",
+    "highcharts-react-official": "^2.2.2",
+    "immutability-helper": "^3.0.1",
+    "moment": "^2.24.0",
+    "moment-timezone": "^0.5.26",
     "react": "^16.10.2",
+    "react-addons-update": "^15.6.2",
     "react-dom": "^16.10.2",
     "react-scripts": "3.2.0"
   },
