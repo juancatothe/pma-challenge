@@ -63,7 +63,7 @@ class App extends React.Component {
                   data: [{
                       id: 'task1',
                       name: 'Shred Classified Documents',
-                      start: Date.parse('2020-01-17'),
+                      start: Date.parse('01/17/2020'),
                       end: Date.parse('02/14/2020'),
                       color: '#4682B4',
                       position: 0,
@@ -71,16 +71,16 @@ class App extends React.Component {
                   {
                       id: 'task2',
                       name: 'Change Tires on Vehicle Fleet',
-                      start: Date.UTC(2020, 0, 31),
-                      end: Date.UTC(2020, 2, 17),
+                      start: Date.parse('01/31/2020'),
+                      end: Date.parse('03/17/2020'),
                       color: '#D8BFD8',
                       position: 1,
                       rank: 1},
                   {
                       id: 'task3',
                       name: 'Export Data to Excel Spreadsheet',
-                      start: Date.UTC(2020, 2, 31),
-                      end: Date.UTC(2020, 3, 17),
+                      start: Date.parse('03/31/2020'),
+                      end: Date.parse('04/17/2020'),
                       color: '#FFE4B5',
                       position: 2,
                       rank: 2
@@ -88,8 +88,8 @@ class App extends React.Component {
                   {
                       id: 'task4',
                       name: 'Purchase 8000 Reams of Printer Paper',
-                      start: Date.UTC(2020, 3, 18),
-                      end: Date.UTC(2020, 4, 19),
+                      start: Date.parse('04/18/2020'),
+                      end: Date.parse('05/19/2020'),
                       color: '#FF6347',
                       position: 3,
                       rank: 3
@@ -97,8 +97,8 @@ class App extends React.Component {
                   {
                       id: 'task5',
                       name: 'Interview Prospective Candidates',
-                      start: Date.UTC(2020, 4, 31),
-                      end: Date.UTC(2020, 5, 17),
+                      start: Date.parse('05/31/2020'),
+                      end: Date.parse('06/21/2020'),
                       color: '#FF1493',
                       position: 4,
                       rank: 4
@@ -106,8 +106,8 @@ class App extends React.Component {
                   {
                       id: 'task6',
                       name: 'Clone Github Repositories',
-                      start: Date.UTC(2020, 6, 31),
-                      end: Date.UTC(2020, 7, 17),
+                      start: Date.parse('07/31/2020'),
+                      end: Date.parse('08/19/2020'),
                       color: '#7FFF00',
                       position: 5,
                       rank: 5

@@ -39,3 +39,7 @@ input {
   border: 1px solid lightgrey;
   margin-left: 10px;
 }
+
+.close-button{
+  cursor: pointer;
+}

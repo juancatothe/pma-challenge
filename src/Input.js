@@ -36,7 +36,7 @@ class Input extends React.Component {
     render() {
       return (
         <div className="input-container">
-          <span onClick={this.props.hideInput}>Close</span>
+          <span onClick={this.props.hideInput} className="close-button">Close</span>
           <h2>Update Tasks</h2>
           <form className="input-form">
               <label>
