@@ -43,7 +43,6 @@ class Input extends React.Component {
       let currentVal =  event
       currentVal = Date.parse(currentVal)
       
-      let task = {...this.props.activeTask}
       const updatedTask = {
         ...this.props.activeTask,
         'end': currentVal
@@ -82,6 +81,10 @@ class Input extends React.Component {
               <label>
               Task Color:
               <input type="color" name="color" value={this.props.activeTask.color} onChange={this.handleChange} />
+              </label>
+              <label>
+              Task Rank:
+              <input type="number" name="rank" value={this.props.activeTask.rank} onChange={this.handleChange} />
               </label>
           </form>
         </div>
