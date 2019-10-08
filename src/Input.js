@@ -1,7 +1,8 @@
 import React from 'react'
 import './App.css'
-import Moment from 'moment'
-import moment from 'moment-timezone';
+import DatePicker from 'react-datepicker';
+
+import 'react-datepicker/dist/react-datepicker.css';
 
 
 class Input extends React.Component {
@@ -11,27 +12,44 @@ class Input extends React.Component {
       }
     
       this.handleChange = this.handleChange.bind(this);
+      this.handleStartChange = this.handleStartChange.bind(this);
+      this.handleEndChange = this.handleEndChange.bind(this);
     }
   
     handleChange(event) {
         // Take a copy of the current task
         let currentVal =  event.currentTarget.value
         let currentName =  event.currentTarget.name
-        if (currentName === 'start'){
-          currentVal = Date.parse(currentVal)
-        } 
-        else if (currentName === 'end'){
-          currentVal = Date.parse(currentVal)
-        }
-        let task = {...this.props.activeTask}
+
         const updatedTask = {
           ...this.props.activeTask,
           [currentName]: currentVal
         };
-        this.props.updateTask(this.props.activeTask.position, updatedTask);
-        
+        this.props.updateTask(this.props.activeTask.position, updatedTask);   
     }
   
+    handleStartChange(event){
+      let currentVal =  event
+      currentVal = Date.parse(currentVal)
+      
+      const updatedTask = {
+        ...this.props.activeTask,
+        'start': currentVal
+      };
+      this.props.updateTask(this.props.activeTask.position, updatedTask);   
+    }
+    
+    handleEndChange(event){
+      let currentVal =  event
+      currentVal = Date.parse(currentVal)
+      
+      let task = {...this.props.activeTask}
+      const updatedTask = {
+        ...this.props.activeTask,
+        'end': currentVal
+      };
+      this.props.updateTask(this.props.activeTask.position, updatedTask);   
+    }
   
     render() {
       return (
@@ -45,11 +63,21 @@ class Input extends React.Component {
               </label>
               <label>
               Task Start Date:
-              <input type="date" name="start" value={Moment(this.props.activeTask.start).format('YYYY-MM-DD')} onChange={this.handleChange} />
+              <DatePicker
+                onChange={ this.handleStartChange }
+                selected={this.props.activeTask.start}
+                name="start"
+                dateFormat="MM/dd/yyyy"
+              />
               </label>
               <label>
               Task End Date:
-              <input type="date" name="end" value={Moment(this.props.activeTask.end).format('YYYY-MM-DD')} onChange={this.handleChange} />
+              <DatePicker
+                onChange={ this.handleEndChange }
+                selected={this.props.activeTask.end}
+                name="end"
+                dateFormat="MM/dd/yyyy"
+              />
               </label>
               <label>
               Task Color:
