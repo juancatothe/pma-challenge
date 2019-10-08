@@ -31,7 +31,6 @@ class App extends React.Component {
   updateTask = (key, updatedTask) => {
     // 1. Take a copy of the current state
     const tasks = { ...this.state.options}
-    console.log(tasks)
     // 2. Update that state
     tasks.series[0].data[key] = updatedTask
     // 3. Set that to state
