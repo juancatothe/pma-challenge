@@ -82,10 +82,6 @@ class Input extends React.Component {
               Task Color:
               <input type="color" name="color" value={this.props.activeTask.color} onChange={this.handleChange} />
               </label>
-              <label>
-              Task Rank:
-              <input type="number" name="rank" value={this.props.activeTask.rank} onChange={this.handleChange} />
-              </label>
           </form>
         </div>
       );
