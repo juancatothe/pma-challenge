@@ -5,7 +5,7 @@
   "homepage": " https://juancatothe.github.io/react-task-app/",
   "dependencies": {
     "gh-pages": "^2.1.1",
-    "highcharts": "^7.2.0",
+    "highcharts": "^9.0.0",
     "highcharts-react-official": "^2.2.2",
     "immutability-helper": "^3.0.1",
     "moment-timezone": "^0.5.26",
